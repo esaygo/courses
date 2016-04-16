@@ -1,0 +1,15 @@
+.result {
+  width: 200px;
+  height: 350px;
+  border: 1px solid grey;
+  background: rgb(237, 199, 77);
+  text-align: center;
+  font-family:serif;
+  margin: 5% 40%;
+  line-height: 1.6em;
+  font-size: 1.2em;
+}
+
+body {
+  background: red;
+}
