@@ -5,22 +5,11 @@ class Courses extends CI_Controller {
 	public function index() {
 		parent::__construct();
 		$this->output->enable_profiler(TRUE);
-		//$this->show_courses();
+
 		//pass the courses data to the courses view
-		$courses_db = $this->show_courses();
-		// var_dump($courses_db);
-		// die();
-		foreach($courses_db as $key=>$course) {
+		$courses_db['courses_data'] = $this->show_courses();
 
-		$send_data[]=array(
-				'name'=>$course['name'],
-        'description'=>$course['description'],
-				'date'=>$course['created_at']
-    );
-	}
-
-    $this->load->view('courses', ['course_data' => $send_data]);
-
+    $this->load->view('courses', $courses_db);
 	}
 
 	public function add_course() {

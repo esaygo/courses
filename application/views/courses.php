@@ -37,13 +37,13 @@
     <th>Action</th>
   <thead>
   <tbody>
-    <?php foreach ($course_data as $key=>$course) { ?>
+  <?php foreach($courses_data as $key=>$course) { ?>
     <tr>
     <td><?php
       echo $course['name']; ?></td>
     <td><?php
       echo $course['description']; ?></td>
-    <td><?php echo $course['date']; ?></td>
+    <td><?php echo $course['created_at']; ?></td>
   </tr>
   <?php } ?>
   </tbody>
