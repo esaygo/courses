@@ -16,9 +16,18 @@
         margin-left: 10%;
         padding: 15px;
       }
+      #message{
+        margin-left: 100px;
+      }
     </style>
   </head>
   <body>
+    <p id="message">
+      <?= $this->session->flashdata('error_validation');?>
+    </p>
+    <p>
+      <!-- < ?= form_open('courses');?> -->
+    <!-- </p> -->
  <div>
   <fieldset>
     <legend>Add a new course</legend>
@@ -44,6 +53,13 @@
     <td><?php
       echo $course['description']; ?></td>
     <td><?php echo $course['created_at']; ?></td>
+    <td>
+      <select name="actions">
+        <option disabled selected option>--select an option--</option>
+        <option value="delete"><form><button type="submit" value="delete">delete<button></form></option>
+        <option value="update"><form><button type="submit" value="update">update<button></form><option>
+      </select>
+    </td>
   </tr>
   <?php } ?>
   </tbody>
