@@ -13,17 +13,20 @@ class Course extends CI_Model {
 			// die();
     }
 
+    function destroy($course_id) {
+      $query = "DELETE FROM courses WHERE id = ?";
+      $this->db->query($query,$course_id);
+      redirect('/');
+    }
+
+
      function get_all_courses() {
-       return $this->db->query("SELECT * FROM courses")->result_array();
+       return $this->db->query("SELECT * FROM courses ORDER BY id DESC")->result_array();
 
          //pass the courses data back to the controller
 
      }
 
-    //  function get_course_by_id($course_id) {
-    //      return $this->db->query("SELECT * FROM courses WHERE id = ?", array($course_id))->row_array();
-    //  }
-
-}
+  }
 
 ?>

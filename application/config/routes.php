@@ -39,7 +39,7 @@
 */
 
 $route['default_controller'] = 'courses';
-//$route['process_form'] = '/surveys/process_form';
+$route['dont_delete'] = 'courses/dont_delete';
 $route['404_override'] = 'errors/page_missing';
 
 
