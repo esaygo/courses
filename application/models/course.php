@@ -16,7 +16,7 @@ class Course extends CI_Model {
     function destroy($course_id) {
       $query = "DELETE FROM courses WHERE id = ?";
       $this->db->query($query,$course_id);
-      redirect('/');
+      redirect('../');
     }
 
 

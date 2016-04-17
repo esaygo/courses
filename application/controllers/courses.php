@@ -32,7 +32,7 @@ class Courses extends CI_Controller {
 		} else {
 				$this->session->set_flashdata('error_validation','Course name should be at least 15 characters');
 		}
-		redirect('/');
+		redirect('../');
 	}
 	 public function show_courses() {
 		 $this->load->model("Course");
@@ -46,15 +46,14 @@ class Courses extends CI_Controller {
 	 }
 
 	 public function dont_delete() {
-		 redirect('/');
+		 redirect('../');
 	 }
 
 	 public function destroy() {
 		 $this->load->model("Course");
 		 $this->load->view('course_to_delete', ['data' => $course_id]);
 		 $course_id = $this->input->post();
-
-		 //$this->Course->destroy($course_id['id']);
+		 $this->Course->destroy($course_id['id']);
 	 }
 
 	 public function update() {

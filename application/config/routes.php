@@ -40,6 +40,7 @@
 
 $route['default_controller'] = 'courses';
 $route['dont_delete'] = 'courses/dont_delete';
+$route['destroy'] = 'courses/destroy';
 $route['404_override'] = 'errors/page_missing';
 
 

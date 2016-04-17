@@ -69,11 +69,11 @@
             <input name="id" type="hidden" value="<?= $course['id'];?>">
             <input name="name" type="hidden" value="<?= $course['name'];?>">
             <input name="description" type="hidden" value="<?= $course['description'];?>">
-            <button type="submit" value="delete"><img src="../assets/img/delete_icon.gif" alt="delete" heigth="10" width="15"></button>
+            <button type="submit" value="delete"><img src="assets/img/delete_icon.gif" alt="delete" heigth="10" width="15"></button>
           </form>
           <form class="actions" action="courses/update" method="post">
             <input name="id" type="hidden" value="<?= $course['id'];?>">
-            <button type="submit" value="update"><img src="../assets/img/edit_icon.gif" alt="delete" heigth="10" width="15"></button>
+            <button type="submit" value="update"><img src="assets/img/edit_icon.gif" alt="delete" heigth="10" width="15"></button>
           </form>
     </td>
   </tr>
