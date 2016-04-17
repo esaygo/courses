@@ -22,11 +22,20 @@ class Course extends CI_Model {
 
      function get_all_courses() {
        return $this->db->query("SELECT * FROM courses ORDER BY id DESC")->result_array();
-
          //pass the courses data back to the controller
+     }
+
+     function get_record($id) {
+       $query = "SELECT * FROM courses WHERE id = ?";
+       return $this->db->query($query,$id)->row_array();
 
      }
 
+     function update($new_vals) {
+       $query = " UPDATE courses SET name='" . $new_vals["new_name"]. "', description='" . $new_vals["new_desc"]. "' WHERE id=" .$new_vals["id"]. ";";
+       $this->db->query($query);
+       redirect('../');
+     }
   }
 
 ?>
